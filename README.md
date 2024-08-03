@@ -7,6 +7,15 @@ sparse attention + quantization
 
 ![image-20240803001323614](image/README/image-20240803001323614.png)
 
+## Evalutation
+
+* first 300 questions of [GSM8K: test](https://huggingface.co/datasets/openai/gsm8k/viewer/main/test) with llama3-8B-Instruct
+* Method\_\<n-bit\>\_\<full precision length\>
+
+![image-20240803113632297](image/README/image-20240803113632297.png)
+
+![image-20240803114214165](image/README/image-20240803114214165.png)
+
 ## how to use
 
 ### requirements
