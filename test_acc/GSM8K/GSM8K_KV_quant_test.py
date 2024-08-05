@@ -1,6 +1,6 @@
 # %%
 #-----------------------------------------------------------------------------
-model_name = "THUDM/glm-4-9b-chat"
+model_name = "microsoft/Phi-3-mini-4k-instruct"
 device = "cuda:0"
 output_path = "functional_test.csv"
 #methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant"]
@@ -79,7 +79,7 @@ def run_with_cache(model, input_ids, cache):
     # Run the model
     model.generation_config.temperature=None
     model.generation_config.top_p=None
-    output = model.generate(input_ids, do_sample=False, past_key_values=cache, pad_token_id=tokenizer.eos_token_id, max_length=model.config.max_position_embeddings)
+    output = model.generate(input_ids, do_sample=False, past_key_values=cache, pad_token_id=tokenizer.eos_token_id, max_new_tokens=new_token_length)
     return output
 
 def get_cache(method, n_bits, dense):
@@ -183,7 +183,7 @@ for i in trange(100):#len(ds['test'])):
     chat_template = to_chat_template(question)
     input_ids = tokenizer(chat_template, return_tensors="pt").input_ids.to(device)
     if "baseline" in methods:
-        output = model.generate(input_ids, do_sample=False, pad_token_id=tokenizer.eos_token_id, max_length=model.config.max_position_embeddings)
+        output = model.generate(input_ids, do_sample=False, pad_token_id=tokenizer.eos_token_id, max_new_tokens=new_token_length)
         model_output, model_output_answer, accuracy, length = manage_output(output, ground_truth_answer, chat_template)
 
         df = pd.concat([df, pd.DataFrame([[question, i, ground_truth, ground_truth_answer, model_output, model_output_answer, "baseline", accuracy, 16, length, model_name]],

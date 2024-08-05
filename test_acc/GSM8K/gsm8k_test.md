@@ -31,7 +31,8 @@
 - [ ] Qwen/Qwen2-1.5B-Instruct
 - [ ] Qwen/Qwen2-7B-Instruct
 
-##### ChatGLM
+##### Phi-3
 
-- [ ] THUDM/glm-4-9b-chat
-- [ ] THUDM/chatglm3-6b-32k
+- [ ] microsoft/Phi-3-mini-128k-instruct
+- [ ] microsoft/Phi-3-small-128k-instruct
+- [ ] microsoft/Phi-3-medium-128k-instruct

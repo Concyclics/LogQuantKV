@@ -1,0 +1,25 @@
+{
+    "llama2-7b-chat-4k": 3500,
+    "longchat-v1.5-7b-32k": 31500,
+    "xgen-7b-8k": 7500,
+    "internlm-7b-8k": 7500,
+    "chatglm2-6b": 31500,
+    "chatglm2-6b-32k": 31500,
+    "chatglm3-6b-32k": 31500,
+    "vicuna-v1.5-7b-16k": 15500,
+    "llama-3-8B-Instruct": 31500,
+    "llama-3.1-8B-Instruct": 31500,
+    "Qwen1.5-1.8B-Chat": 31500,
+    "Qwen1.5-1.8B-Chat-AWQ": 31500,
+    "Qwen1.5-4B-Chat": 31500,
+    "Qwen1.5-4B-Chat-AWQ": 31500,
+    "Qwen1.5-7B-Chat": 31500,
+    "Qwen1.5-7B-Chat-AWQ": 31500,
+    "Qwen1.5-14B-Chat": 31500,
+    "Qwen1.5-14B-Chat-AWQ": 31500,
+    "Qwen1.5-32B-Chat": 31500,
+    "Qwen1.5-32B-Chat-AWQ": 31500,
+    "Qwen2-1.5B-Instruct": 31500,
+    "Qwen2-7B-Instruct": 31500
+
+}
