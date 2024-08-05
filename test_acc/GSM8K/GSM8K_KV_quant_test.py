@@ -1,6 +1,6 @@
 # %%
 #-----------------------------------------------------------------------------
-model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+model_name = "THUDM/glm-4-9b-chat"
 device = "cuda:0"
 output_path = "functional_test.csv"
 #methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant"]
@@ -10,7 +10,7 @@ n_bit_set = [2]
 full_precision_lengths = [128, 256]
 
 import sys
-sys.path.append('..')
+sys.path.append('../../')
 from src.LogQuant import (QuantoLogQuantizedCache, LogQuantizedCacheConfig, 
                           QuantoStreamingQuantizedCache, StreamingQuantizedCacheConfig, 
                           QuantoPartialStreamingQuantizedCache, PartialStreamingQuantizedCacheConfig,
@@ -19,7 +19,7 @@ from src.LogQuant import (QuantoLogQuantizedCache, LogQuantizedCacheConfig,
 
 import torch
 from torch import nn
-data_type = torch.bfloat16
+data_type = 'auto'
 new_token_length = 1024
 
 from datasets import load_dataset
@@ -39,8 +39,9 @@ model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype=data_type,
     device_map=device,
+    trust_remote_code=True
 )
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
 
 # %%
@@ -78,7 +79,7 @@ def run_with_cache(model, input_ids, cache):
     # Run the model
     model.generation_config.temperature=None
     model.generation_config.top_p=None
-    output = model.generate(input_ids, max_new_tokens=new_token_length, do_sample=False, past_key_values=cache, pad_token_id=tokenizer.eos_token_id)
+    output = model.generate(input_ids, do_sample=False, past_key_values=cache, pad_token_id=tokenizer.eos_token_id, max_length=model.config.max_position_embeddings)
     return output
 
 def get_cache(method, n_bits, dense):
@@ -175,14 +176,14 @@ from tqdm import trange
 df = pd.DataFrame(columns=["question", "qid", "ground_truth", "ground_truth_answer", "model_output", "model_output_answer", "method", "accuracy", "bit_per_token", "total_length", "model_name"])
 #df = pd.read_csv(output_path)
 
-for i in trange(len(ds['test'])):
+for i in trange(100):#len(ds['test'])):
     question = ds['test'][i]['question']
     ground_truth = ds['test'][i]['answer']
     ground_truth_answer = ds['test'][i]['answer'].split("####")[-1].strip()
     chat_template = to_chat_template(question)
     input_ids = tokenizer(chat_template, return_tensors="pt").input_ids.to(device)
     if "baseline" in methods:
-        output = model.generate(input_ids, max_new_tokens=new_token_length, do_sample=False, pad_token_id=tokenizer.eos_token_id)
+        output = model.generate(input_ids, do_sample=False, pad_token_id=tokenizer.eos_token_id, max_length=model.config.max_position_embeddings)
         model_output, model_output_answer, accuracy, length = manage_output(output, ground_truth_answer, chat_template)
 
         df = pd.concat([df, pd.DataFrame([[question, i, ground_truth, ground_truth_answer, model_output, model_output_answer, "baseline", accuracy, 16, length, model_name]],

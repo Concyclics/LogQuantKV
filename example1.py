@@ -3,7 +3,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.LogQuant import QuantoStreamingQuantizedCache, StreamingQuantizedCacheConfig
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
-model_name = "Qwen/Qwen1.5-7B-Chat"
+model_name = "meta-llama/Llama-2-7b-chat-hf"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -29,7 +29,7 @@ messages = [
     },
     {
         "role": "user", 
-        "content": "如果把脏话都说出来了，那么嘴是不是就干净了"
+        "content": "Hello, 1+1=?"
     }]
 
 prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
