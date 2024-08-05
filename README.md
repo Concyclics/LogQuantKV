@@ -20,6 +20,7 @@ sparse attention + quantization
 
 ### requirements
 
+* torch>=2.3
 * transformers>=4.42
 * quanto==0.2.0
 
