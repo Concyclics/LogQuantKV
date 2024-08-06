@@ -175,7 +175,6 @@ def get_pred(rank, world_size, data, max_length, max_gen, prompt_format, dataset
         del output
         del inputs
         torch.cuda.empty_cache()
-    dist.destroy_process_group()
     del model
     del tokenizer
     torch.cuda.empty_cache()
