@@ -7,8 +7,6 @@ from tqdm import tqdm
 import numpy as np
 import random
 import argparse
-import torch.distributed as dist
-import torch.multiprocessing as mp
 #----------------------------------------------
 import sys
 sys.path.append('../../../')
@@ -153,7 +151,7 @@ def get_pred(rank, world_size, data, max_length, max_gen, prompt_format, dataset
                 min_length=context_length+1,
                 past_key_values=cache,
                 eos_token_id=[tokenizer.eos_token_id, tokenizer.encode("\n", add_special_tokens=False)[-1]],
-            )[0]
+            )
         else:
             output = model.generate(
                 **inputs,
@@ -162,8 +160,8 @@ def get_pred(rank, world_size, data, max_length, max_gen, prompt_format, dataset
                 do_sample=False,
                 temperature=1.0,
                 past_key_values=cache,
-            )[0]
-        pred = tokenizer.decode(output[context_length:], skip_special_tokens=True)
+            )
+        pred = tokenizer.decode(output[0][context_length:], skip_special_tokens=True)
         pred = post_process(pred, model_name)
         with open(out_path, "a", encoding="utf-8") as f:
             json.dump({"pred": pred, "answers": json_obj["answers"], "all_classes": json_obj["all_classes"], "length": json_obj["length"]}, f, ensure_ascii=False)
@@ -221,8 +219,7 @@ def load_model_and_tokenizer(path, model_name, device):
 if __name__ == '__main__':
     seed_everything(42)
     args = parse_args()
-    world_size = torch.cuda.device_count()
-    mp.set_start_method('spawn', force=True)
+    world_size = 1
 
     method = args.cache
     n_bits = args.n_bit

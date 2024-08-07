@@ -168,13 +168,13 @@ class StreamingQuantizedCache(DynamicCache):
 
         if len(self.key_cache) <= layer_idx:
             if key_states.shape[-2] > self.sink_length + self.window_length:
-                self._quantized_key_cache.append(self._quantize(key_states[..., self.sink_length:-self.window_length, :].contiguous(), axis=self.axis_key))
-                self._quantized_value_cache.append(self._quantize(value_states[..., self.sink_length:-self.window_length, :].contiguous(), axis=self.axis_value))
                 # Store the sink states as full precision
                 self.sink_key_cache.append(key_states[..., :self.sink_length, :].contiguous())
                 self.sink_value_cache.append(value_states[..., :self.sink_length, :].contiguous())
                 self.key_cache.append(key_states[..., -self.window_length:, :].contiguous())
                 self.value_cache.append(value_states[..., -self.window_length:, :].contiguous())
+                self._quantized_key_cache.append(self._quantize(key_states[..., self.sink_length:-self.window_length, :].contiguous(), axis=self.axis_key))
+                self._quantized_value_cache.append(self._quantize(value_states[..., self.sink_length:-self.window_length, :].contiguous(), axis=self.axis_value))
             else:
                 self._quantized_key_cache.append(None)
                 self._quantized_value_cache.append(None)
@@ -222,6 +222,10 @@ class StreamingQuantizedCache(DynamicCache):
                 else:
                     self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx], key_states], dim=-2)
                     self.value_cache[layer_idx] = torch.cat([self.value_cache[layer_idx], value_states], dim=-2)
+
+        if layer_idx == 0:
+            print("key_to_return", keys_to_return.shape)
+            print("value_to_return", values_to_return.shape)
 
         return keys_to_return, values_to_return
 
