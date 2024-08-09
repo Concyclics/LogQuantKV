@@ -18,10 +18,10 @@
 
 #### Qwen
 
-- [ ] Qwen/Qwen1.5-1.8B-Chat
-- [ ] Qwen/Qwen1.5-1.8B-Chat-AWQ
-- [ ] Qwen/Qwen1.5-4B-Chat
-- [ ] Qwen/Qwen1.5-4B-Chat-AWQ
+- [x] Qwen/Qwen1.5-1.8B-Chat
+- [x] Qwen/Qwen1.5-1.8B-Chat-AWQ
+- [x] Qwen/Qwen1.5-4B-Chat
+- [x] Qwen/Qwen1.5-4B-Chat-AWQ
 - [ ] Qwen/Qwen1.5-7B-Chat
 - [ ] Qwen/Qwen1.5-7B-Chat-AWQ
 - [ ] Qwen/Qwen1.5-14B-Chat
