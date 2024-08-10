@@ -102,13 +102,11 @@ def build_chat(tokenizer, prompt, model_name):
     elif "internlm" in model_name:
         prompt = f"<|User|>:{prompt}<eoh>\n<|Bot|>:"
     else:
-        message = {
-            "role": "system",
-            "content": "You are a helpful assistant.",
-            "role": "user",
-            "content": prompt,
-        }
-        prompt = tokenizer.apply_chat_template([message], tokenize=False, add_generation_prompt=True)
+        message = [
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": prompt}
+        ]
+        prompt = tokenizer.apply_chat_template([message], tokenize=False, add_generation_prompt=True)[0]
     return prompt
 
 def post_process(response, model_name):
