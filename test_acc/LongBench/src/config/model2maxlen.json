@@ -7,7 +7,7 @@
     "chatglm2-6b-32k": 31500,
     "chatglm3-6b-32k": 31500,
     "vicuna-v1.5-7b-16k": 15500,
-    "llama3-8B-Instruct": 31500,
+    "llama3-8B-Instruct": 7500,
     "llama3.1-8B-Instruct": 31500,
     "Qwen1.5-1.8B-Chat": 31500,
     "Qwen1.5-1.8B-Chat-AWQ": 31500,
