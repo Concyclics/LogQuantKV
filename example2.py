@@ -3,7 +3,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.LogQuant import QuantoLogQuantizedCache, LogQuantizedCacheConfig
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
-model_name = "Qwen/Qwen1.5-7B-Chat"
+model_name = "Qwen/Qwen1.5-1.8B-Chat"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -15,7 +15,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 config = LogQuantizedCacheConfig(
             backend="quanto",
             nbits=2,
-            window_length=4,
+            window_length=32,
             compute_dtype="auto",
             device=device,
         )
@@ -35,6 +35,6 @@ prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_
 
 input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to(device)
 
-output = model.generate(input_ids, max_new_tokens=128, past_key_values=cache)
+output = model.generate(input_ids, max_new_tokens=128, past_key_values=cache, do_sample=False)
 
 print(tokenizer.decode(output[0], skip_special_tokens=True))

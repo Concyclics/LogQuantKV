@@ -1,0 +1,200 @@
+{"pred": "13", "answers": ["8"], "all_classes": null, "length": 11221}
+{"pred": "1", "answers": ["11"], "all_classes": null, "length": 9921}
+{"pred": "11", "answers": ["13"], "all_classes": null, "length": 6578}
+{"pred": "1", "answers": ["44"], "all_classes": null, "length": 16346}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["2"], "all_classes": null, "length": 22099}
+{"pred": "13", "answers": ["7"], "all_classes": null, "length": 8383}
+{"pred": "11", "answers": ["7"], "all_classes": null, "length": 4974}
+{"pred": "1.", "answers": ["45"], "all_classes": null, "length": 13970}
+{"pred": "18", "answers": ["4"], "all_classes": null, "length": 14086}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["31"], "all_classes": null, "length": 12357}
+{"pred": "17", "answers": ["4"], "all_classes": null, "length": 15623}
+{"pred": "14", "answers": ["16"], "all_classes": null, "length": 11059}
+{"pred": "17", "answers": ["5"], "all_classes": null, "length": 3991}
+{"pred": "1, 2, 3, 4", "answers": ["44"], "all_classes": null, "length": 17077}
+{"pred": "17", "answers": ["19"], "all_classes": null, "length": 11340}
+{"pred": "14", "answers": ["36"], "all_classes": null, "length": 10543}
+{"pred": "15", "answers": ["24"], "all_classes": null, "length": 8141}
+{"pred": "14", "answers": ["12"], "all_classes": null, "length": 8534}
+{"pred": "14", "answers": ["23"], "all_classes": null, "length": 13749}
+{"pred": "13", "answers": ["14"], "all_classes": null, "length": 5649}
+{"pred": "14", "answers": ["18"], "all_classes": null, "length": 13512}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and ", "answers": ["29"], "all_classes": null, "length": 14584}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["22"], "all_classes": null, "length": 12667}
+{"pred": "14", "answers": ["6"], "all_classes": null, "length": 6510}
+{"pred": "12", "answers": ["8"], "all_classes": null, "length": 6283}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["9"], "all_classes": null, "length": 13036}
+{"pred": "1", "answers": ["26"], "all_classes": null, "length": 5249}
+{"pred": "14", "answers": ["26"], "all_classes": null, "length": 17369}
+{"pred": "1", "answers": ["28"], "all_classes": null, "length": 10898}
+{"pred": "1", "answers": ["43"], "all_classes": null, "length": 13330}
+{"pred": "1, 2, 3, and so on.", "answers": ["34"], "all_classes": null, "length": 13153}
+{"pred": "13", "answers": ["19"], "all_classes": null, "length": 9732}
+{"pred": "15", "answers": ["9"], "all_classes": null, "length": 9246}
+{"pred": "14", "answers": ["40"], "all_classes": null, "length": 11663}
+{"pred": "1, 2, 3, and 4.", "answers": ["14"], "all_classes": null, "length": 17590}
+{"pred": "1", "answers": ["26"], "all_classes": null, "length": 9718}
+{"pred": "17", "answers": ["25"], "all_classes": null, "length": 13084}
+{"pred": "1, 2, 3, and 4.", "answers": ["13"], "all_classes": null, "length": 18601}
+{"pred": "1", "answers": ["35"], "all_classes": null, "length": 12177}
+{"pred": "1, 2, 3, and 4.", "answers": ["20"], "all_classes": null, "length": 11563}
+{"pred": "1.", "answers": ["39"], "all_classes": null, "length": 16004}
+{"pred": "14", "answers": ["7"], "all_classes": null, "length": 13534}
+{"pred": "15", "answers": ["12"], "all_classes": null, "length": 10580}
+{"pred": "15", "answers": ["16"], "all_classes": null, "length": 10333}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and ", "answers": ["30"], "all_classes": null, "length": 14264}
+{"pred": "1", "answers": ["4"], "all_classes": null, "length": 11680}
+{"pred": "14", "answers": ["21"], "all_classes": null, "length": 7461}
+{"pred": "14", "answers": ["5"], "all_classes": null, "length": 12151}
+{"pred": "11", "answers": ["10"], "all_classes": null, "length": 6481}
+{"pred": "15", "answers": ["6"], "all_classes": null, "length": 9456}
+{"pred": "13", "answers": ["31"], "all_classes": null, "length": 8395}
+{"pred": "13", "answers": ["13"], "all_classes": null, "length": 4822}
+{"pred": "3", "answers": ["9"], "all_classes": null, "length": 11201}
+{"pred": "1", "answers": ["11"], "all_classes": null, "length": 11740}
+{"pred": "12", "answers": ["18"], "all_classes": null, "length": 9707}
+{"pred": "15", "answers": ["7"], "all_classes": null, "length": 7447}
+{"pred": "15", "answers": ["5"], "all_classes": null, "length": 6927}
+{"pred": "17", "answers": ["5"], "all_classes": null, "length": 13709}
+{"pred": "1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10", "answers": ["14"], "all_classes": null, "length": 16551}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["40"], "all_classes": null, "length": 15237}
+{"pred": "1", "answers": ["18"], "all_classes": null, "length": 13155}
+{"pred": "1", "answers": ["2"], "all_classes": null, "length": 13433}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["20"], "all_classes": null, "length": 13372}
+{"pred": "1", "answers": ["30"], "all_classes": null, "length": 12589}
+{"pred": "11", "answers": ["12"], "all_classes": null, "length": 6751}
+{"pred": "10", "answers": ["43"], "all_classes": null, "length": 15519}
+{"pred": "14", "answers": ["10"], "all_classes": null, "length": 10373}
+{"pred": "11", "answers": ["11"], "all_classes": null, "length": 6690}
+{"pred": "1", "answers": ["20"], "all_classes": null, "length": 8138}
+{"pred": "1", "answers": ["37"], "all_classes": null, "length": 9910}
+{"pred": "14", "answers": ["15"], "all_classes": null, "length": 9802}
+{"pred": "15", "answers": ["17"], "all_classes": null, "length": 10817}
+{"pred": "12", "answers": ["5"], "all_classes": null, "length": 10977}
+{"pred": "1", "answers": ["9"], "all_classes": null, "length": 8150}
+{"pred": "14", "answers": ["21"], "all_classes": null, "length": 7300}
+{"pred": "1", "answers": ["26"], "all_classes": null, "length": 14083}
+{"pred": "12", "answers": ["19"], "all_classes": null, "length": 18136}
+{"pred": "14", "answers": ["9"], "all_classes": null, "length": 5562}
+{"pred": "1", "answers": ["10"], "all_classes": null, "length": 5442}
+{"pred": "15", "answers": ["17"], "all_classes": null, "length": 12213}
+{"pred": "1", "answers": ["5"], "all_classes": null, "length": 13084}
+{"pred": "1", "answers": ["13"], "all_classes": null, "length": 12754}
+{"pred": "1", "answers": ["5"], "all_classes": null, "length": 7079}
+{"pred": "1", "answers": ["19"], "all_classes": null, "length": 8018}
+{"pred": "15", "answers": ["13"], "all_classes": null, "length": 9086}
+{"pred": "12", "answers": ["19"], "all_classes": null, "length": 11301}
+{"pred": "16", "answers": ["12"], "all_classes": null, "length": 8771}
+{"pred": "18", "answers": ["15"], "all_classes": null, "length": 6573}
+{"pred": "1", "answers": ["7"], "all_classes": null, "length": 5522}
+{"pred": "15", "answers": ["16"], "all_classes": null, "length": 10898}
+{"pred": "14", "answers": ["5"], "all_classes": null, "length": 8866}
+{"pred": "15", "answers": ["7"], "all_classes": null, "length": 11143}
+{"pred": "14", "answers": ["3"], "all_classes": null, "length": 11516}
+{"pred": "1.", "answers": ["27"], "all_classes": null, "length": 11744}
+{"pred": "1", "answers": ["21"], "all_classes": null, "length": 14392}
+{"pred": "1", "answers": ["8"], "all_classes": null, "length": 13321}
+{"pred": "1", "answers": ["26"], "all_classes": null, "length": 11086}
+{"pred": "1", "answers": ["14"], "all_classes": null, "length": 9267}
+{"pred": "14", "answers": ["14"], "all_classes": null, "length": 6650}
+{"pred": "1", "answers": ["13"], "all_classes": null, "length": 3554}
+{"pred": "14", "answers": ["10"], "all_classes": null, "length": 13846}
+{"pred": "1", "answers": ["11"], "all_classes": null, "length": 7488}
+{"pred": "1", "answers": ["38"], "all_classes": null, "length": 13904}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["11"], "all_classes": null, "length": 6245}
+{"pred": "14", "answers": ["19"], "all_classes": null, "length": 10261}
+{"pred": "1", "answers": ["5"], "all_classes": null, "length": 18130}
+{"pred": "1", "answers": ["23"], "all_classes": null, "length": 12919}
+{"pred": "1", "answers": ["21"], "all_classes": null, "length": 16375}
+{"pred": "1", "answers": ["31"], "all_classes": null, "length": 14767}
+{"pred": "1", "answers": ["4"], "all_classes": null, "length": 9363}
+{"pred": "15", "answers": ["24"], "all_classes": null, "length": 9779}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["46"], "all_classes": null, "length": 14598}
+{"pred": "14", "answers": ["21"], "all_classes": null, "length": 14280}
+{"pred": "15", "answers": ["20"], "all_classes": null, "length": 10288}
+{"pred": "12", "answers": ["11"], "all_classes": null, "length": 5651}
+{"pred": "15", "answers": ["30"], "all_classes": null, "length": 11494}
+{"pred": "14", "answers": ["2"], "all_classes": null, "length": 3967}
+{"pred": "17", "answers": ["7"], "all_classes": null, "length": 8047}
+{"pred": "14", "answers": ["14"], "all_classes": null, "length": 12816}
+{"pred": "1, 2, 3, and 4.", "answers": ["29"], "all_classes": null, "length": 12602}
+{"pred": "14", "answers": ["9"], "all_classes": null, "length": 6561}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["41"], "all_classes": null, "length": 13506}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["25"], "all_classes": null, "length": 14899}
+{"pred": "1", "answers": ["39"], "all_classes": null, "length": 12547}
+{"pred": "1", "answers": ["18"], "all_classes": null, "length": 10765}
+{"pred": "13", "answers": ["7"], "all_classes": null, "length": 6447}
+{"pred": "15", "answers": ["30"], "all_classes": null, "length": 18934}
+{"pred": "1", "answers": ["9"], "all_classes": null, "length": 6231}
+{"pred": "10", "answers": ["28"], "all_classes": null, "length": 10433}
+{"pred": "15", "answers": ["37"], "all_classes": null, "length": 12074}
+{"pred": "1", "answers": ["5"], "all_classes": null, "length": 12913}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["33"], "all_classes": null, "length": 11704}
+{"pred": "15", "answers": ["14"], "all_classes": null, "length": 6751}
+{"pred": "1", "answers": ["21"], "all_classes": null, "length": 12119}
+{"pred": "1.", "answers": ["16"], "all_classes": null, "length": 12140}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10", "answers": ["31"], "all_classes": null, "length": 16806}
+{"pred": "1", "answers": ["19"], "all_classes": null, "length": 12672}
+{"pred": "15", "answers": ["12"], "all_classes": null, "length": 4960}
+{"pred": "17", "answers": ["3"], "all_classes": null, "length": 6404}
+{"pred": "1.", "answers": ["32"], "all_classes": null, "length": 14244}
+{"pred": "1", "answers": ["44"], "all_classes": null, "length": 12279}
+{"pred": "1.", "answers": ["23"], "all_classes": null, "length": 13851}
+{"pred": "15", "answers": ["17"], "all_classes": null, "length": 9334}
+{"pred": "1, 2, 3, and 4.", "answers": ["39"], "all_classes": null, "length": 14435}
+{"pred": "1", "answers": ["23"], "all_classes": null, "length": 12927}
+{"pred": "14", "answers": ["11"], "all_classes": null, "length": 10543}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["4"], "all_classes": null, "length": 17186}
+{"pred": "1.", "answers": ["26"], "all_classes": null, "length": 15302}
+{"pred": "1", "answers": ["16"], "all_classes": null, "length": 6374}
+{"pred": "15", "answers": ["16"], "all_classes": null, "length": 10190}
+{"pred": "15", "answers": ["17"], "all_classes": null, "length": 5700}
+{"pred": "1, 2, 3, and 4, 5, 6, 7, 8, 9, 10, ", "answers": ["27"], "all_classes": null, "length": 15210}
+{"pred": "14", "answers": ["7"], "all_classes": null, "length": 4858}
+{"pred": "15", "answers": ["14"], "all_classes": null, "length": 9469}
+{"pred": "1", "answers": ["31"], "all_classes": null, "length": 15454}
+{"pred": "1", "answers": ["3"], "all_classes": null, "length": 13841}
+{"pred": "1", "answers": ["3"], "all_classes": null, "length": 9325}
+{"pred": "13", "answers": ["3"], "all_classes": null, "length": 6771}
+{"pred": "18", "answers": ["9"], "all_classes": null, "length": 11684}
+{"pred": "14", "answers": ["3"], "all_classes": null, "length": 13730}
+{"pred": "14", "answers": ["17"], "all_classes": null, "length": 8501}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["22"], "all_classes": null, "length": 13035}
+{"pred": "1", "answers": ["16"], "all_classes": null, "length": 9281}
+{"pred": "15", "answers": ["17"], "all_classes": null, "length": 7400}
+{"pred": "1", "answers": ["4"], "all_classes": null, "length": 14283}
+{"pred": "14", "answers": ["7"], "all_classes": null, "length": 12616}
+{"pred": "1", "answers": ["38"], "all_classes": null, "length": 12285}
+{"pred": "1.", "answers": ["17"], "all_classes": null, "length": 14999}
+{"pred": "14", "answers": ["15"], "all_classes": null, "length": 13557}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["34"], "all_classes": null, "length": 15684}
+{"pred": "1.", "answers": ["5"], "all_classes": null, "length": 12236}
+{"pred": "1, 2, 3, and 4", "answers": ["22"], "all_classes": null, "length": 16104}
+{"pred": "1", "answers": ["30"], "all_classes": null, "length": 9118}
+{"pred": "1", "answers": ["9"], "all_classes": null, "length": 17635}
+{"pred": "14", "answers": ["6"], "all_classes": null, "length": 8470}
+{"pred": "16", "answers": ["7"], "all_classes": null, "length": 5326}
+{"pred": "1, 2, 3, 4, 5", "answers": ["31"], "all_classes": null, "length": 12687}
+{"pred": "1", "answers": ["5"], "all_classes": null, "length": 5518}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["35"], "all_classes": null, "length": 15203}
+{"pred": "14", "answers": ["24"], "all_classes": null, "length": 7955}
+{"pred": "17", "answers": ["37"], "all_classes": null, "length": 12718}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["11"], "all_classes": null, "length": 12939}
+{"pred": "1", "answers": ["28"], "all_classes": null, "length": 12397}
+{"pred": "14", "answers": ["5"], "all_classes": null, "length": 11938}
+{"pred": "15", "answers": ["4"], "all_classes": null, "length": 8543}
+{"pred": "15", "answers": ["11"], "all_classes": null, "length": 8590}
+{"pred": "15", "answers": ["16"], "all_classes": null, "length": 9543}
+{"pred": "14", "answers": ["26"], "all_classes": null, "length": 13429}
+{"pred": "15", "answers": ["10"], "all_classes": null, "length": 9585}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["42"], "all_classes": null, "length": 15870}
+{"pred": "1", "answers": ["26"], "all_classes": null, "length": 12313}
+{"pred": "14", "answers": ["21"], "all_classes": null, "length": 6986}
+{"pred": "15", "answers": ["19"], "all_classes": null, "length": 9484}
+{"pred": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1", "answers": ["26"], "all_classes": null, "length": 15479}
+{"pred": "15", "answers": ["5"], "all_classes": null, "length": 9960}
+{"pred": "1", "answers": ["20"], "all_classes": null, "length": 14973}
+{"pred": "1.", "answers": ["15"], "all_classes": null, "length": 13734}
+{"pred": "120", "answers": ["10"], "all_classes": null, "length": 6073}
+{"pred": "1", "answers": ["17"], "all_classes": null, "length": 15984}
+{"pred": "12", "answers": ["28"], "all_classes": null, "length": 6972}
