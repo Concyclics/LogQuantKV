@@ -718,19 +718,20 @@ class LogQuantizedCache(DynamicCache):
                     log_sparse_index = tmp_index[0: 2 * self.window_length: 2]
                     local_index = tmp_index[2 * self.window_length:]
                     tmp_index = log_sparse_index + local_index
-
+                if key_states.shape[-2] < 3 * self.window_length and key_states.shape[-2] > self.window_length:
+                    log_sparse_index = tmp_index[:self.window_length]
+                    local_index = tmp_index[self.window_length:]
                 self.local_slide_window_index = local_index
                 self.full_precision_logsparse_index = log_sparse_index
+
             else:
                 self.local_slide_window_index.append(self._seen_tokens - 1)
                 if len(self.local_slide_window_index) > 2 * self.window_length:
                     if len(self.full_precision_logsparse_index) > 0:
                         self.full_precision_logsparse_index = (self.full_precision_logsparse_index + self.local_slide_window_index[0:self.window_length])[0::2]
                     else:
-                        self.full_precision_logsparse_index = self.local_slide_window_index[0:self.window_length:1]
+                        self.full_precision_logsparse_index = self.local_slide_window_index[:self.window_length]
                     self.local_slide_window_index = self.local_slide_window_index[self.window_length:]
-            #print("local_slide_window_index", self.local_slide_window_index)
-            #print("full_precision_logsparse_index", self.full_precision_logsparse_index)
 
         if len(self.key_cache) <= layer_idx:
             if self.local_slide_window_index[0] == 0:
@@ -741,12 +742,9 @@ class LogQuantizedCache(DynamicCache):
                 self._quantized_value_cache.append(self._quantize(value_states[..., :self.local_slide_window_index[0], :].contiguous(), axis=self.axis_value))
             self.key_cache.append(key_states[..., self.local_slide_window_index, :].contiguous())
             self.value_cache.append(value_states[..., self.local_slide_window_index, :].contiguous())
-            if len(self.local_slide_window_index) == 2 * self.window_length:
-                self.log_sparse_key_cache.append(key_states[..., :self.window_length:1, :].contiguous())
-                self.log_sparse_value_cache.append(value_states[..., :self.window_length:1, :].contiguous())
-            else:
-                self.log_sparse_key_cache.append(key_states[..., self.full_precision_logsparse_index, :].contiguous())
-                self.log_sparse_value_cache.append(value_states[..., self.full_precision_logsparse_index, :].contiguous())
+            self.log_sparse_key_cache.append(key_states[..., self.full_precision_logsparse_index, :].contiguous())
+            self.log_sparse_value_cache.append(value_states[..., self.full_precision_logsparse_index, :].contiguous())
+
             keys_to_return, values_to_return = key_states, value_states
         else:
             if self._quantized_key_cache[layer_idx] is None:
@@ -761,43 +759,38 @@ class LogQuantizedCache(DynamicCache):
 
             keys_to_return = torch.cat(keys_to_return, dim=-2)
             values_to_return = torch.cat(values_to_return, dim=-2)
-
-            '''
-            if layer_idx == 0:
-                print(f"keys_to_return: {keys_to_return.shape}, values_to_return: {values_to_return.shape}")
-                print(f"key_cache: {self.key_cache[layer_idx].shape}, value_cache: {self.value_cache[layer_idx].shape}")
-                print(f"log_sparse_key_cache: {self.log_sparse_key_cache[layer_idx].shape}")
-                print(f"full_precision_logsparse_index: {self.full_precision_logsparse_index}")
-                print(f"local_slide_window_index: {self.local_slide_window_index}")
-            '''
-
-            keys_to_return[..., self.full_precision_logsparse_index, :] = self.log_sparse_key_cache[layer_idx]
-            values_to_return[..., self.full_precision_logsparse_index, :] = self.log_sparse_value_cache[layer_idx]
+            
+            if len(self.full_precision_logsparse_index) > 0:
+                keys_to_return[..., self.full_precision_logsparse_index, :] = self.log_sparse_key_cache[layer_idx]
+                values_to_return[..., self.full_precision_logsparse_index, :] = self.log_sparse_value_cache[layer_idx]
 
             if (
                 self.key_cache[layer_idx].dim() == 4
                 and self.key_cache[layer_idx].shape[-2] + 1 >= 2 * self.window_length
             ):
                 self._quantized_key_cache[layer_idx] = self._quantize(
-                    keys_to_return[..., :-self.window_length-1, :].contiguous(),
+                    keys_to_return[..., :-self.window_length, :].contiguous(),
                     axis=self.axis_key)
 
                 self._quantized_value_cache[layer_idx] = self._quantize(
-                    values_to_return[..., :-self.window_length-1, :].contiguous(), 
+                    values_to_return[..., :-self.window_length, :].contiguous(), 
                     axis=self.axis_value)
-                
-                self.log_sparse_key_cache[layer_idx] = torch.cat([
-                    self.log_sparse_key_cache[layer_idx][..., 0::2, :],
-                    self.key_cache[layer_idx][..., self.window_length%2:self.window_length:2, :]
-                ], dim=-2)
+                if len(self.full_precision_logsparse_index) > 0:
+                    self.log_sparse_key_cache[layer_idx] = torch.cat([
+                        self.log_sparse_key_cache[layer_idx][..., 0::2, :],
+                        self.key_cache[layer_idx][..., self.window_length%2:self.window_length:2, :]
+                    ], dim=-2)
 
-                self.log_sparse_value_cache[layer_idx] = torch.cat([
-                    self.log_sparse_value_cache[layer_idx][..., 0::2, :],
-                    self.value_cache[layer_idx][..., self.window_length%2:self.window_length:2, :]
-                ], dim=-2)
+                    self.log_sparse_value_cache[layer_idx] = torch.cat([
+                        self.log_sparse_value_cache[layer_idx][..., 0::2, :],
+                        self.value_cache[layer_idx][..., self.window_length%2:self.window_length:2, :]
+                    ], dim=-2)
+                else:
+                    self.log_sparse_key_cache[layer_idx] = self.key_cache[layer_idx][..., :self.window_length, :].contiguous()
+                    self.log_sparse_value_cache[layer_idx] = self.value_cache[layer_idx][..., :self.window_length, :].contiguous()             
                 
-                self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx][..., self.window_length:, :], key_states], dim=-2)
-                self.value_cache[layer_idx] = torch.cat([self.value_cache[layer_idx][..., self.window_length:, :], value_states], dim=-2)
+                self.key_cache[layer_idx] = keys_to_return[..., -self.window_length:, :].contiguous()
+                self.value_cache[layer_idx] = values_to_return[..., -self.window_length:, :].contiguous()
             else:
                 self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx], key_states], dim=-2)
                 self.value_cache[layer_idx] = torch.cat([self.value_cache[layer_idx], value_states], dim=-2)
@@ -1022,6 +1015,11 @@ class PartialLogQuantizedCache(DynamicCache):
                     log_sparse_index = tmp_index[0: 2 * self.window_length: 2]
                     local_index = tmp_index[2 * self.window_length:]
                     tmp_index = log_sparse_index + local_index
+                if key_states.shape[-2] < 3 * self.window_length and key_states.shape[-2] > self.window_length:
+                    log_sparse_index = tmp_index[:self.window_length]
+                    local_index = tmp_index[self.window_length:]
+                self.local_slide_window_index = local_index
+                self.full_precision_logsparse_index = log_sparse_index
 
                 self.local_slide_window_index = local_index
                 self.full_precision_logsparse_index = log_sparse_index
@@ -1040,10 +1038,7 @@ class PartialLogQuantizedCache(DynamicCache):
             else:
                 self._quantized_key_cache.append(self._quantize(key_states[..., :self.local_slide_window_index[0], :].contiguous(), axis=self.axis_key))
             self.key_cache.append(key_states[..., self.local_slide_window_index, :].contiguous())
-            if len(self.local_slide_window_index) == 2 * self.window_length:
-                self.log_sparse_key_cache.append(key_states[..., :self.window_length:1, :].contiguous())
-            else:
-                self.log_sparse_key_cache.append(key_states[..., self.full_precision_logsparse_index, :].contiguous())
+            self.log_sparse_key_cache.append(key_states[..., self.full_precision_logsparse_index, :].contiguous())
         
             rest = value_states.shape[-2] % self.window_length
             if rest == 0:
@@ -1071,29 +1066,25 @@ class PartialLogQuantizedCache(DynamicCache):
             keys_to_return = torch.cat(keys_to_return, dim=-2)
             values_to_return = torch.cat(values_to_return, dim=-2)
 
-            if layer_idx == 0:
-                print(f"keys_to_return: {keys_to_return.shape}, values_to_return: {values_to_return.shape}")
-                print(f"dequant_key: {dequant_key.shape}, dequant_value: {dequant_value.shape}")
-                print(f"key_cache: {self.key_cache[layer_idx].shape}, value_cache: {self.value_cache[layer_idx].shape}")
-                print(f"log_sparse_key_cache: {self.log_sparse_key_cache[layer_idx].shape}")
-                print(f"full_precision_logsparse_index: {self.full_precision_logsparse_index}\n")
-
-            keys_to_return[..., self.full_precision_logsparse_index, :] = self.log_sparse_key_cache[layer_idx]
+            if len(self.full_precision_logsparse_index) > 0:
+                keys_to_return[..., self.full_precision_logsparse_index, :] = self.log_sparse_key_cache[layer_idx]
 
             if (
                 self.key_cache[layer_idx].dim() == 4
                 and self.key_cache[layer_idx].shape[-2] + 1 >= 2 * self.window_length
             ):
                 self._quantized_key_cache[layer_idx] = self._quantize(
-                    keys_to_return[..., :-self.window_length-1, :].contiguous(),
+                    keys_to_return[..., :-self.window_length, :].contiguous(),
                     axis=self.axis_key)
-                
-                self.log_sparse_key_cache[layer_idx] = torch.cat([
-                    self.log_sparse_key_cache[layer_idx][..., 0::2, :],
-                    self.key_cache[layer_idx][..., self.window_length%2:self.window_length:2, :]
-                ], dim=-2)
+                if len(self.full_precision_logsparse_index) > 0:
+                    self.log_sparse_key_cache[layer_idx] = torch.cat([
+                        self.log_sparse_key_cache[layer_idx][..., 0::2, :],
+                        self.key_cache[layer_idx][..., self.window_length%2:self.window_length:2, :]
+                    ], dim=-2)
+                else:
+                    self.log_sparse_key_cache[layer_idx] = self.key_cache[layer_idx][..., :self.window_length, :].contiguous()
 
-                self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx][..., self.window_length:, :], key_states], dim=-2)
+                self.key_cache[layer_idx] = keys_to_return[..., -self.window_length:, :].contiguous()
             else:
                 self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx], key_states], dim=-2)
 
