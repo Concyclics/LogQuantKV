@@ -84,7 +84,7 @@
 {"pred": "4×100 meters", "answers": ["100 metres"], "all_classes": null, "length": 6297}
 {"pred": "due to the onset of his Alzheimer's disease.", "answers": ["due to the onset and progression of Alzheimer's disease"], "all_classes": null, "length": 11891}
 {"pred": "Yes", "answers": ["yes"], "all_classes": null, "length": 3135}
-{"pred": "Leucippus and Democritus", "answers": ["Leucippus"], "all_classes": null, "length": 11424}
+{"pred": "Leucippus and Democritus.", "answers": ["Leucippus"], "all_classes": null, "length": 11424}
 {"pred": "Hollywood, Florida", "answers": ["Hollywood, Florida"], "all_classes": null, "length": 11061}
 {"pred": "Office building", "answers": ["building"], "all_classes": null, "length": 10681}
 {"pred": "1937", "answers": ["1895"], "all_classes": null, "length": 7370}

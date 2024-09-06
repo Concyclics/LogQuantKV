@@ -20,7 +20,7 @@
 {"pred": "Mysore", "answers": ["Mysore"], "all_classes": null, "length": 3532}
 {"pred": "Hamar", "answers": ["Kristiania"], "all_classes": null, "length": 2782}
 {"pred": "The Lee Strasberg Theatre & Film Institute in Los Angeles.", "answers": ["Lee Strasberg Theatre and Film Institute"], "all_classes": null, "length": 7578}
-{"pred": "Larry Cohen was born in 1936, and Edvīns Šnore was born in 1974.", "answers": ["Hell Up In Harlem"], "all_classes": null, "length": 9013}
+{"pred": "Larry Cohen was born in 1936, and Edvīns Šnore was born in 1974 is not correct, but 1974 is the", "answers": ["Hell Up In Harlem"], "all_classes": null, "length": 9013}
 {"pred": "Cipriano Castro was born in 1858, while Damir Nikšić was born in 1970.", "answers": ["Cipriano Castro"], "all_classes": null, "length": 6026}
 {"pred": "Jack Arnold died on March 17, 1991, and Fernando Ayala died on September 11, 1997.", "answers": ["Monster On The Campus"], "all_classes": null, "length": 6192}
 {"pred": "Altuğ Çelikbilek", "answers": ["Altuğ Çelikbilek"], "all_classes": null, "length": 889}
@@ -106,7 +106,7 @@
 {"pred": "None", "answers": ["Hong Kong Film Award for Best Director"], "all_classes": null, "length": 3401}
 {"pred": "3 September 1992", "answers": ["3 September 1992"], "all_classes": null, "length": 1680}
 {"pred": "Nathaniel McLenaghan died in 1912, Frederick Cleveland Morgan died in 1962.", "answers": ["Nathaniel Mclenaghan"], "all_classes": null, "length": 3026}
-{"pred": "The University of Texas, specifically the University of Texas at Austin, is not mentioned in the passage but the University of Texas is mentioned in the passage 9.", "answers": ["Tisch"], "all_classes": null, "length": 3749}
+{"pred": "The University of Texas at Austin is not mentioned in the passage, however, the passage does mention that he received a BFA in Film and Television from the T", "answers": ["Tisch"], "all_classes": null, "length": 3749}
 {"pred": "Román Chalbaud", "answers": ["Cuchillos De Fuego"], "all_classes": null, "length": 2697}
 {"pred": "Moment of Danger (1960)", "answers": ["Moment Of Danger"], "all_classes": null, "length": 4003}
 {"pred": "Rock Street Journal was established in January 1993, De AS was established in December 1972.", "answers": ["De As"], "all_classes": null, "length": 2425}
@@ -175,7 +175,7 @@
 {"pred": "1209", "answers": ["1234"], "all_classes": null, "length": 9182}
 {"pred": "24 October 1642", "answers": ["25 July 1666"], "all_classes": null, "length": 6136}
 {"pred": "The Wind's Fierce", "answers": ["The Wind'S Fierce"], "all_classes": null, "length": 9043}
-{"pred": "He was suffering from mood swings and was in agony day and night, and he was in a state of \"agony and it is better for everyone if he", "answers": ["drowning"], "all_classes": null, "length": 8169}
+{"pred": "He was suffering from mood swings and was in agony day and night, and he was in a state of pain and his investments were in agony and he was in", "answers": ["drowning"], "all_classes": null, "length": 8169}
 {"pred": "Abu Dhabi is not mentioned, however, it is mentioned that she is a diplomat from the United Arab Emirates and a former ambassador to the Netherlands and Switzerland.", "answers": ["Abu Dhabi"], "all_classes": null, "length": 3593}
 {"pred": "Prenzlau", "answers": ["Prenzlau"], "all_classes": null, "length": 3584}
 {"pred": "Poznań, Poland", "answers": ["Poznań"], "all_classes": null, "length": 3814}

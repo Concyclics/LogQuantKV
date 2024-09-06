@@ -5,17 +5,17 @@
 {"pred": "段落1：", "answers": ["段落1"], "all_classes": null, "length": 6654}
 {"pred": "段落5", "answers": ["段落5"], "all_classes": null, "length": 7127}
 {"pred": "段落25", "answers": ["段落25"], "all_classes": null, "length": 6601}
-{"pred": "段落5：朱贤不仅是宋代的理学家，也是一位重要的诗人。", "answers": ["段落5"], "all_classes": null, "length": 5469}
+{"pred": "段落5：朱贤不仅是宋代的理学家，也是一位重要的诗人。他创作了超过400首诗歌", "answers": ["段落5"], "all_classes": null, "length": 5469}
 {"pred": "段落4：这段落的内容与党章中的“四个服从”原则有关，描述了党员的服从原则", "answers": ["段落4"], "all_classes": null, "length": 6385}
 {"pred": "段落29：", "answers": ["段落29"], "all_classes": null, "length": 5671}
 {"pred": "段落24：", "answers": ["段落5"], "all_classes": null, "length": 5781}
 {"pred": "段落10：福康安(1755年，字子谦，号子谦，清朝乾隆年间，福康安", "answers": ["段落10"], "all_classes": null, "length": 6619}
-{"pred": "段落29：《新加坡》是台湾的亲密好友，两国在政治、经济、文化等多个领域有着", "answers": ["段落29"], "all_classes": null, "length": 6856}
+{"pred": "段落29：韦小宝要离开京城，但天色已晚。他在永定门外二十里处扎营住宿。�", "answers": ["段落29"], "all_classes": null, "length": 6856}
 {"pred": "段落28：中共中央政治局委员、国务院副总理刘延东赴北京市朝阳区考察基层计划", "answers": ["段落28"], "all_classes": null, "length": 6964}
 {"pred": "段落4：j", "answers": ["段落4"], "all_classes": null, "length": 7421}
-{"pred": "段落17：交通部长林佳龙与北基三首长召开了首次会议，达成五个共识，包括将", "answers": ["段落17"], "all_classes": null, "length": 5502}
+{"pred": "段落17：交通部长林佳龙与北基三首长召开了首次会议，讨论北北基轨道路政策", "answers": ["段落17"], "all_classes": null, "length": 5502}
 {"pred": "段落8：温哥华（Vancouver），位于加拿大不列颠哥伦比华省西南部太平洋沿岸", "answers": ["段落8"], "all_classes": null, "length": 5950}
-{"pred": "段落12：楚文化是中国春秋时期南方的文明，主要在河南、湖北、安徽、江苏、", "answers": ["段落12"], "all_classes": null, "length": 6854}
+{"pred": "段落12：楚文化是中国春秋时期南方的文明，主要在今湖北省、河南、安徽、江", "answers": ["段落12"], "all_classes": null, "length": 6854}
 {"pred": "段落4：上面是关于佛陀的教义，了解真实存在的概念。", "answers": ["段落4"], "all_classes": null, "length": 6695}
 {"pred": "段落5：泉州是中国历史悠久的城市，拥有丰富的文化遗产和历史意义。", "answers": ["段落5"], "all_classes": null, "length": 5778}
 {"pred": "段落23：新疆维吾尔自治区（简称新疆，西北边陲，陆地面积最大的省级行政区", "answers": ["段落23"], "all_classes": null, "length": 7125}
@@ -38,7 +38,7 @@
 {"pred": "段落22", "answers": ["段落14"], "all_classes": null, "length": 7344}
 {"pred": "段落13", "answers": ["段落13"], "all_classes": null, "length": 6689}
 {"pred": "段落18", "answers": ["段落18"], "all_classes": null, "length": 7266}
-{"pred": "段落23：潮音茅蓬（左）与玉海（右）", "answers": ["段落23"], "all_classes": null, "length": 7715}
+{"pred": "段落23：潮音茅蓬（左）与其妻子（右）", "answers": ["段落23"], "all_classes": null, "length": 7715}
 {"pred": "段落11", "answers": ["段落11"], "all_classes": null, "length": 8431}
 {"pred": "段落1：本文探讨了在“每个产业都是服务业”的时代中，如何通过细节来实现成功。良好的服务", "answers": ["段落1"], "all_classes": null, "length": 5624}
 {"pred": "段落3：死刑作为我国古代的阶级社会的核心刑罚，在维护社会安定、维护阶级统治", "answers": ["段落3"], "all_classes": null, "length": 5859}
@@ -51,7 +51,7 @@
 {"pred": "段落25", "answers": ["段落9"], "all_classes": null, "length": 6666}
 {"pred": "段落2", "answers": ["段落2"], "all_classes": null, "length": 7984}
 {"pred": "段落25：", "answers": ["段落25"], "all_classes": null, "length": 6109}
-{"pred": "段落29：根 据港交所的资料，在2007年10月中青基业斥资5350万港元，购买", "answers": ["段落29"], "all_classes": null, "length": 7521}
+{"pred": "段落29：根 据港交所的资料，在2007年10月中青基业斥资5350万港元购买了", "answers": ["段落29"], "all_classes": null, "length": 7521}
 {"pred": "段落29：据考古，1993年10月在湖北省荆门市沙洋区四方乡郭店村出土", "answers": ["段落29"], "all_classes": null, "length": 7329}
 {"pred": "段落2", "answers": ["段落2"], "all_classes": null, "length": 5949}
 {"pred": "段落19：治疗方法", "answers": ["段落19"], "all_classes": null, "length": 6675}
@@ -70,7 +70,7 @@
 {"pred": "段落11：“80后”是指年轻的新一代，指代的年轻人或是社会运动。", "answers": ["段落11"], "all_classes": null, "length": 7112}
 {"pred": "段落27：【摘 要】...", "answers": ["段落25"], "all_classes": null, "length": 7202}
 {"pred": "段落28：段落28：段落28：段落28：段落28：段落28：段落28：段落28：", "answers": ["段落28"], "all_classes": null, "length": 7340}
-{"pred": "段落5：见丁教授的背景。", "answers": ["段落5"], "all_classes": null, "length": 5796}
+{"pred": "段落5：丁教授是中欧国际工商学院著名教授，曾任中国巴菲特但斌先生的财务分析老师", "answers": ["段落5"], "all_classes": null, "length": 5796}
 {"pred": "段落27：4.1.4 4.1.4.1 4.1.4.1.1 4.1.", "answers": ["段落27"], "all_classes": null, "length": 6902}
 {"pred": "段落24", "answers": ["段落18"], "all_classes": null, "length": 6983}
 {"pred": "段落22", "answers": ["段落22"], "all_classes": null, "length": 6486}
@@ -81,7 +81,7 @@
 {"pred": "段落10：", "answers": ["段落9"], "all_classes": null, "length": 6672}
 {"pred": "段落18：", "answers": ["段落18"], "all_classes": null, "length": 6248}
 {"pred": "段落11：处理器，这个半导体科技的最前沿的半导体科技的发动机，充当了前线的", "answers": ["段落12"], "all_classes": null, "length": 7147}
-{"pred": "段落16：周迅是中国大陆的知名女演员和歌手，出生于浙江衢州。周迅除了", "answers": ["段落18"], "all_classes": null, "length": 6121}
+{"pred": "段落16：周迅是中国大陆的知名女演员和歌手，中国四大花旦之一。", "answers": ["段落18"], "all_classes": null, "length": 6121}
 {"pred": "段落1：", "answers": ["段落1"], "all_classes": null, "length": 5941}
 {"pred": "段落11：在时空方面，类似于我们在池塘中投掷石头时产生的涟漪。", "answers": ["段落11"], "all_classes": null, "length": 6963}
 {"pred": "段落4：", "answers": ["段落5"], "all_classes": null, "length": 6187}
@@ -89,7 +89,7 @@
 {"pred": "段落5：《四库全书》是乾隆皇帝主持编撰的四部书，包含了中国古代所有图书", "answers": ["段落5"], "all_classes": null, "length": 7265}
 {"pred": "段落13：读音: DJO-ko-vich 年龄: 28 (22.05.1987) 转入职业年份", "answers": ["段落13"], "all_classes": null, "length": 6063}
 {"pred": "段落13：", "answers": ["段落13"], "all_classes": null, "length": 6907}
-{"pred": "段落11：清内阁蒙古堂档中保存的文书", "answers": ["段落11"], "all_classes": null, "length": 6376}
+{"pred": "段落11：清内阁蒙古文合璧文书的形成流程是，内阁蒙古地方的满文和", "answers": ["段落11"], "all_classes": null, "length": 6376}
 {"pred": "段落1：", "answers": ["段落2"], "all_classes": null, "length": 7265}
 {"pred": "段落15", "answers": ["段落15"], "all_classes": null, "length": 7660}
 {"pred": "段落25：提到“港独”问题的讨论。", "answers": ["段落23"], "all_classes": null, "length": 6742}
@@ -104,7 +104,7 @@
 {"pred": "段落27", "answers": ["段落16"], "all_classes": null, "length": 6334}
 {"pred": "段落23：答案：段落3", "answers": ["段落23"], "all_classes": null, "length": 5997}
 {"pred": "段落21", "answers": ["段落21"], "all_classes": null, "length": 6401}
-{"pred": "段落23：（食厌想的语义）是语言学家对食厌想的解释", "answers": ["段落23"], "all_classes": null, "length": 6238}
+{"pred": "段落23：（食厌想的语义）是语言学家蔡若虹的说法，食厌想的语", "answers": ["段落23"], "all_classes": null, "length": 6238}
 {"pred": "段落16：美国国家航空航天局（National Aeronautics and Space Administration，简称NASA）是美国联邦政府的行政机构", "answers": ["段落15"], "all_classes": null, "length": 6438}
 {"pred": "段落26：朝鲜民主主义人民共和国（朝鲜语：조선민주주의인민공화국，英语：Democratic People's Republic of Korea", "answers": ["段落26"], "all_classes": null, "length": 7249}
 {"pred": "段落24：春节是中国的传统节日，人们在这个时候会团聚，放烟花，庆祝新年。", "answers": ["段落24"], "all_classes": null, "length": 6573}
@@ -112,9 +112,9 @@
 {"pred": "段落8：2 Key Laboratory of Mineral Resources，Institute of Geology and Geophysics，Chinese Academy of Sciences，Beijing 100029，", "answers": ["段落8"], "all_classes": null, "length": 6508}
 {"pred": "段落24：1900摄像网讯 下下周周末（04.19）至04.21）北美票房总计1", "answers": ["段落30"], "all_classes": null, "length": 5792}
 {"pred": "段落6：Ch'en T'ang: Innovator in T'ang Poery, by T'ang Dynasty, 1994.", "answers": ["段落6"], "all_classes": null, "length": 7625}
-{"pred": "段落29：科里等人所发现的早于希尔伯特论文的校样，填补了早期研究中的一大空", "answers": ["段落29"], "all_classes": null, "length": 7058}
+{"pred": "段落29：科里等人所发现的早于希尔伯特论文的校样", "answers": ["段落29"], "all_classes": null, "length": 7058}
 {"pred": "段落14：", "answers": ["段落7"], "all_classes": null, "length": 5928}
-{"pred": "段落1：北戴河是位于河北省秦皇岛市中心的西部地区。", "answers": ["段落1"], "all_classes": null, "length": 8786}
+{"pred": "段落1：北戴河是位于河北省秦皇岛市中心的西部。", "answers": ["段落1"], "all_classes": null, "length": 8786}
 {"pred": "段落9", "answers": ["段落7"], "all_classes": null, "length": 5446}
 {"pred": "段落12：学务处即将推出“诚实商店”，透过师生捐赠和商品义卖，展现", "answers": ["段落12"], "all_classes": null, "length": 6923}
 {"pred": "段落8：", "answers": ["段落8"], "all_classes": null, "length": 7903}
@@ -122,7 +122,7 @@
 {"pred": "段落22", "answers": ["段落22"], "all_classes": null, "length": 7435}
 {"pred": "段落13", "answers": ["段落12"], "all_classes": null, "length": 8420}
 {"pred": "段落12", "answers": ["段落6"], "all_classes": null, "length": 6858}
-{"pred": "段落24：本产品的基料为功能无纺布，医用胶为主体部分，利用胶体中所含的�", "answers": ["段落24"], "all_classes": null, "length": 5543}
+{"pred": "段落24：本产品的基料为功能无纺布，医用胶为主体部分，使用胶体中的鹅掌柴", "answers": ["段落24"], "all_classes": null, "length": 5543}
 {"pred": "段落26：《福祉》", "answers": ["段落26"], "all_classes": null, "length": 6050}
 {"pred": "段落16：", "answers": ["段落16"], "all_classes": null, "length": 7893}
 {"pred": "段落3：财富中文网刚刚发布了2020年的《财富》中国500强排行榜，考量了过去一年的", "answers": ["段落3"], "all_classes": null, "length": 6067}
@@ -138,7 +138,7 @@
 {"pred": "段落26", "answers": ["段落26"], "all_classes": null, "length": 6404}
 {"pred": "段落28：", "answers": ["段落28"], "all_classes": null, "length": 6066}
 {"pred": "段落13：中国画术语。谓山水画的十二忌病。", "answers": ["段落13"], "all_classes": null, "length": 7846}
-{"pred": "段落17：中国发展史上标志着中国共产党在中国的历史发展。", "answers": ["段落19"], "all_classes": null, "length": 7375}
+{"pred": "段落17：中国发展史上标志着中国科技发展史上标志着中国科技发展史上", "answers": ["段落19"], "all_classes": null, "length": 7375}
 {"pred": "段落16", "answers": ["段落16"], "all_classes": null, "length": 7306}
 {"pred": "段落26：2005年4月29日，中国国务院第八次定期报告（CEDAW/C/AUS/8）载", "answers": ["段落26"], "all_classes": null, "length": 7152}
 {"pred": "段落6", "answers": ["段落6"], "all_classes": null, "length": 5431}
@@ -154,12 +154,12 @@
 {"pred": "段落16：中国光学学会成立于1956年，是中国最大的光学学术团体。", "answers": ["段落16"], "all_classes": null, "length": 5088}
 {"pred": "段落24：陕西省人民政府各部门", "answers": ["段落24"], "all_classes": null, "length": 6016}
 {"pred": "段落16：", "answers": ["段落16"], "all_classes": null, "length": 7188}
-{"pred": "段落13：item 33.\t3 “征收土地于不妨碍征收目的之范围内，应为损失最", "answers": ["段落13"], "all_classes": null, "length": 6383}
+{"pred": "段落13：item 33.\t3 “征收土地于不妨碍征收目的之范围内，应为之原则", "answers": ["段落13"], "all_classes": null, "length": 6383}
 {"pred": "段落17：", "answers": ["段落16"], "all_classes": null, "length": 6446}
 {"pred": "段落11：这是练乙铮在信报的文章，洋洋四万字，字的就是他当谋士的六年。", "answers": ["段落11"], "all_classes": null, "length": 6837}
 {"pred": "段落27：", "answers": ["段落27"], "all_classes": null, "length": 6107}
 {"pred": "段落18", "answers": ["段落18"], "all_classes": null, "length": 7412}
-{"pred": "段落8：当时，夏无酷暑，夏无严寒，夏无严寒，夏无严寒，气候宜", "answers": ["段落8"], "all_classes": null, "length": 7151}
+{"pred": "段落8：当时，共有地图审查委员会审定了中国南沙群岛中、英文岛名，颁发了", "answers": ["段落8"], "all_classes": null, "length": 7151}
 {"pred": "段落10：4. 受难曲歌剧性质的受难曲是指以受难为题材的歌剧，主要是以", "answers": ["段落11"], "all_classes": null, "length": 6236}
 {"pred": "段落19：段落11：农历新年将至，似乎每年都会有很多人关心关于利是封的相关信息。", "answers": ["段落11"], "all_classes": null, "length": 5924}
 {"pred": "段落16：本名：周杰伦 周杰伦英文名：Jay Chou 周杰伦 周杰伦生日：1979年1", "answers": ["段落15"], "all_classes": null, "length": 6645}
@@ -169,7 +169,7 @@
 {"pred": "段落23：3、 人生中我们写了多少次错误的字，画了多少次错误的画。然而，人生中我们", "answers": ["段落23"], "all_classes": null, "length": 8232}
 {"pred": "段落8", "answers": ["段落8"], "all_classes": null, "length": 6775}
 {"pred": "段落2：新书：(傲娇鬼夫求轻宠)欢迎收看：《帝国盛宠：鬼王", "answers": ["段落2"], "all_classes": null, "length": 6967}
-{"pred": "段落22：达县，原名为达县，原指现在的达州市、巴中市和广安市，后来又指", "answers": ["段落22"], "all_classes": null, "length": 6199}
+{"pred": "段落22：达县，原名为达县，原指现在的达州市、巴中市和广安市的地区，现指", "answers": ["段落22"], "all_classes": null, "length": 6199}
 {"pred": "段落9：1：1，选项：1，天津市足球篮球选拔报名截止。", "answers": ["段落9"], "all_classes": null, "length": 6848}
 {"pred": "段落27", "answers": ["段落27"], "all_classes": null, "length": 6822}
 {"pred": "段落2：一阶滤波算法的原理是使用软件编程实现普通的硬件RC低通滤波器的", "answers": ["段落2"], "all_classes": null, "length": 6636}
@@ -177,12 +177,12 @@
 {"pred": "段落19：", "answers": ["段落9"], "all_classes": null, "length": 8760}
 {"pred": "段落2", "answers": ["段落2"], "all_classes": null, "length": 6768}
 {"pred": "段落3：工业固体废物产生量呈现迅速增加的趋势。", "answers": ["段落3"], "all_classes": null, "length": 5341}
-{"pred": "段落9：月初1日到5日，水星跟冥王星、土星发生结构，这是几天的水星跟", "answers": ["段落9"], "all_classes": null, "length": 6218}
+{"pred": "段落9：月初1日到5日，水星跟冥王星、土星发生结构，这是容易脾气暴�", "answers": ["段落9"], "all_classes": null, "length": 6218}
 {"pred": "段落28", "answers": ["段落30"], "all_classes": null, "length": 7494}
 {"pred": "段落13", "answers": ["段落13"], "all_classes": null, "length": 6056}
 {"pred": "段落7：赖热典医生是一名基督徒，他最喜欢的圣经经文是《弥迦书》第六章", "answers": ["段落5"], "all_classes": null, "length": 6225}
 {"pred": "段落29：本课教学强调强调对联的奇妙与美丽，学生可以通过对联来体会到汉字的", "answers": ["段落29"], "all_classes": null, "length": 5954}
-{"pred": "段落16：约瑟夫·维萨里奥尼斯·斯大林（Josef Vissarionovich Stalin）是苏联前", "answers": ["段落15"], "all_classes": null, "length": 6507}
+{"pred": "段落16：约瑟夫·维萨里奥尼斯·斯大林（斯大林）是苏联前最高领导人，任", "answers": ["段落15"], "all_classes": null, "length": 6507}
 {"pred": "段落14：2021年12月31日，公司2021年度归属于上市公司股东的净利润为人民币56,959", "answers": ["段落14"], "all_classes": null, "length": 6525}
 {"pred": "段落9：剧情：每个人一生中都会遇到很多人，五年前，她救了他，五年后，他却说", "answers": ["段落9"], "all_classes": null, "length": 6694}
 {"pred": "段落11", "answers": ["段落30"], "all_classes": null, "length": 5928}

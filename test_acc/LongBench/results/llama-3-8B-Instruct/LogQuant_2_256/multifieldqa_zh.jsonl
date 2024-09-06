@@ -12,7 +12,7 @@
 {"pred": "2014年1月23日。", "answers": ["2014年1月23日。"], "all_classes": null, "length": 4656}
 {"pred": "Brother 有限公司。", "answers": ["兄弟工业株式会社。"], "all_classes": null, "length": 8493}
 {"pred": "2013年11月1日。", "answers": ["2013年11月1日9时许。"], "all_classes": null, "length": 2140}
-{"pred": "一、突出经济发展、促进供给侧结构性改革\r\n二、突出城乡统筹、促进基础设施建设\r\n三、突出生态文明、促进生态治理\r\n四、突出人才培养、促进创新驱动\r\n五、", "answers": ["三大主题工作、三大重点民生和三大基础工程。"], "all_classes": null, "length": 8672}
+{"pred": "一、突出经济发展、促进供给侧结构性改革\r\n二、突出城乡统筹发展、促进基础设施建设\r\n三、突出生态文明建设、促进生态治理\r\n四、突出人才培养、促进创新驱动\r\n", "answers": ["三大主题工作、三大重点民生和三大基础工程。"], "all_classes": null, "length": 8672}
 {"pred": "40754.95元", "answers": ["40754.95元。"], "all_classes": null, "length": 3242}
 {"pred": "湖南省湘潭市中级人民法院。", "answers": ["湖南省湘潭市中级人民法院。"], "all_classes": null, "length": 2832}
 {"pred": "凤凤之力。", "answers": ["钢铁侠制造的机器将凤凰之力打散，使凤凰附体到镭射眼身上。"], "all_classes": null, "length": 8489}
@@ -38,7 +38,7 @@
 {"pred": "28个", "answers": ["28个。"], "all_classes": null, "length": 2321}
 {"pred": "标准模式、运动延时拍摄、变焦拍摄、拍摄、Story 模式、全景拍摄、拍摄、拍摄、拍摄、拍摄、拍摄、拍摄、拍摄、拍摄、拍摄、拍摄、拍摄、拍摄、拍", "answers": ["包括运动延时、延时摄影、动态变焦、慢动作、视频、照片、全景拍摄和Story模式。"], "all_classes": null, "length": 7672}
 {"pred": "原告胜诉。", "answers": ["原告胜诉。"], "all_classes": null, "length": 2189}
-{"pred": "温度保持在 10°C 到 35°C 之间，湿度保持在 20% 到 80% 之间，避免潮湿、潮湿、雷雨天气、含有液体的环境。", "answers": ["温度10°C至35°C，湿度20%至80%。"], "all_classes": null, "length": 8505}
+{"pred": "温度保持在 10°C 到 35°C 之间，湿度保持在 20% 到 80% 之间，不能在潮湿或潮湿地区使用。", "answers": ["温度10°C至35°C，湿度20%至80%。"], "all_classes": null, "length": 8505}
 {"pred": "防城港市政府工作报告。", "answers": ["防城港市。"], "all_classes": null, "length": 10709}
 {"pred": "10 代表格网大小为 10m。", "answers": ["10m格网。"], "all_classes": null, "length": 12363}
 {"pred": "泗阳膘鸡、八集小花生、丁庄大饼、王小花生、泗阳白酥梨、泗阳小花生、泗阳小饼、泗阳小饼、泗阳小饼、泗阳小", "answers": ["泗阳膘鸡、御珍酒、穿城大饼、八集小花生、丁庄大菜、泗阳白酥梨、王集小团饼、新袁羊肉等。"], "all_classes": null, "length": 11283}
@@ -155,7 +155,7 @@
 {"pred": "2347.39万元、3603.91万元、307.88万元", "answers": ["6264.77万元。"], "all_classes": null, "length": 5117}
 {"pred": "亚热带季风气候。", "answers": ["漳平市属亚热带季风气候，中部河谷地带为南亚热带气候。漳平市气候具有具有温热湿润，雨水充足，冬短无严寒，夏长无酷暑，垂直气候显著，干湿季节分明，灾害性天气时有发生等特点。"], "all_classes": null, "length": 5470}
 {"pred": "800MHz", "answers": ["800MHz。"], "all_classes": null, "length": 14809}
-{"pred": "城市居民区、商业区、环境敏感区。", "answers": ["城市居民区、商业区及其他环境敏感区。"], "all_classes": null, "length": 6109}
+{"pred": "城市居民区、商业区和环境敏感区。", "answers": ["城市居民区、商业区及其他环境敏感区。"], "all_classes": null, "length": 6109}
 {"pred": "关于胶合板材料的购买。", "answers": ["胶合板材料的买卖合同。"], "all_classes": null, "length": 2106}
 {"pred": "60 月", "answers": ["60个月。"], "all_classes": null, "length": 9790}
 {"pred": "一、依法判决被告晁国勤偿还原告借款本金1599577.5元及利息（含罚息、复利）41546.47元；二、依法判决原告有优先受偿权；三、依法", "answers": ["被告偿还借款及利息，享有抵押权，连带清偿责任，承担诉讼费。"], "all_classes": null, "length": 3560}

@@ -174,7 +174,7 @@
 {"pred": "Paragraph 25", "answers": ["Paragraph 25"], "all_classes": null, "length": 8888}
 {"pred": "Paragraph 23", "answers": ["Paragraph 23"], "all_classes": null, "length": 8088}
 {"pred": "Paragraph 30", "answers": ["Paragraph 30"], "all_classes": null, "length": 10318}
-{"pred": "Paragraph 7.", "answers": ["Paragraph 7"], "all_classes": null, "length": 10754}
+{"pred": "Paragraph 7", "answers": ["Paragraph 7"], "all_classes": null, "length": 10754}
 {"pred": "Paragraph 10", "answers": ["Paragraph 10"], "all_classes": null, "length": 8055}
 {"pred": "Paragraph 30", "answers": ["Paragraph 30"], "all_classes": null, "length": 9471}
 {"pred": "Paragraph 9", "answers": ["Paragraph 9"], "all_classes": null, "length": 9415}

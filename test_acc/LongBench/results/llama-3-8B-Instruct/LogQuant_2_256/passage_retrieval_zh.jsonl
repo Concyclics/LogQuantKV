@@ -68,7 +68,7 @@
 {"pred": "段落10", "answers": ["段落10"], "all_classes": null, "length": 5910}
 {"pred": "段落7", "answers": ["段落7"], "all_classes": null, "length": 7163}
 {"pred": "段落11", "answers": ["段落11"], "all_classes": null, "length": 7112}
-{"pred": "根据您的要求，我将摘要出自第11段落。", "answers": ["段落25"], "all_classes": null, "length": 7202}
+{"pred": "根据您的要求，我将摘要出自第24段落。\n\n段落24：“行是行为，身口意之造作。德行者", "answers": ["段落25"], "all_classes": null, "length": 7202}
 {"pred": "段落28", "answers": ["段落28"], "all_classes": null, "length": 7340}
 {"pred": "段落3", "answers": ["段落5"], "all_classes": null, "length": 5796}
 {"pred": "段落4。", "answers": ["段落27"], "all_classes": null, "length": 6902}

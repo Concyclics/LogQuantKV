@@ -3,11 +3,21 @@
     "dureader": 22.47,
     "gov_report": 18.94,
     "hotpotqa": 53.22,
+    "lcc": 57.82,
+    "lsht": 35.5,
     "multifieldqa_en": 46.86,
     "multifieldqa_zh": 55.41,
-    "multi_news": 15.1,
+    "multi_news": 15.13,
     "musique": 29.46,
     "narrativeqa": 28.51,
+    "passage_count": 5.58,
+    "passage_retrieval_en": 92.67,
+    "passage_retrieval_zh": 60.37,
     "qasper": 39.12,
-    "qmsum": 18.75
+    "qmsum": 18.75,
+    "repobench-p": 48.98,
+    "samsum": 34.3,
+    "trec": 68.0,
+    "triviaqa": 92.25,
+    "vcsum": 15.45
 }
