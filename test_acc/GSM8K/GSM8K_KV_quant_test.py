@@ -1,10 +1,11 @@
 # %%
 #-----------------------------------------------------------------------------
-model_name = "microsoft/Phi-3-mini-4k-instruct"
+model_name = "Qwen/Qwen1.5-1.8B-Chat"
 device = "cuda:0"
 output_path = "functional_test.csv"
 #methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant"]
-methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant"]
+methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant", "KiViSink"]
+methods = ["KiViSink"]
 #methods = ["PartialLogQuant"]
 n_bit_set = [2]
 full_precision_lengths = [128, 256]
@@ -14,7 +15,8 @@ sys.path.append('../../')
 from src.LogQuant import (QuantoLogQuantizedCache, LogQuantizedCacheConfig, 
                           QuantoStreamingQuantizedCache, StreamingQuantizedCacheConfig, 
                           QuantoPartialStreamingQuantizedCache, PartialStreamingQuantizedCacheConfig,
-                          QuantoPartialLogQuantizedCache, PartialLogQuantizedCacheConfig)
+                          QuantoPartialLogQuantizedCache, PartialLogQuantizedCacheConfig,
+                          QuantoKiViSinkQuantizedCache, KiViSinkQuantizedCacheConfig)
 #-----------------------------------------------------------------------------
 
 import torch
@@ -130,6 +132,15 @@ def get_cache(method, n_bits, dense):
             device=device,
         )
         cache = QuantoPartialLogQuantizedCache(config)
+    elif method == "KiViSink":
+        config =  KiViSinkQuantizedCacheConfig(
+            backend="quanto",
+            nbits=n_bits,
+            window_length=dense,
+            compute_dtype=data_type,
+            device=device,
+        )
+        cache = QuantoKiViSinkQuantizedCache(config)
     else:
         cache = None
     return cache
@@ -149,6 +160,9 @@ def get_bits_per_token(length, dense, n_bits, method):
     elif method == "PartialLogQuant":
         window_length = dense//2
         bits_per_token = (n_bits * (length - 2 * window_length) + 16 * 2 * window_length) / length
+    elif method == "KiViSink":
+        window_length = dense
+        bits_per_token = (n_bits * (length - window_length - 2) + 16 * window_length + 32) / length
     else:
         bits_per_token = 16
     return bits_per_token
@@ -176,7 +190,7 @@ from tqdm import trange
 df = pd.DataFrame(columns=["question", "qid", "ground_truth", "ground_truth_answer", "model_output", "model_output_answer", "method", "accuracy", "bit_per_token", "total_length", "model_name"])
 #df = pd.read_csv(output_path)
 
-for i in trange(100):#len(ds['test'])):
+for i in trange(10):#len(ds['test'])):
     question = ds['test'][i]['question']
     ground_truth = ds['test'][i]['answer']
     ground_truth_answer = ds['test'][i]['answer'].split("####")[-1].strip()
