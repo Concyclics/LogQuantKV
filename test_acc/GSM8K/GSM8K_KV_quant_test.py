@@ -4,11 +4,11 @@ model_name = "Qwen/Qwen1.5-1.8B-Chat"
 device = "cuda:0"
 output_path = "functional_test.csv"
 #methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant"]
-methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant", "KiViSink"]
+#methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant", "KiViSink"]
 methods = ["KiViSink"]
 #methods = ["PartialLogQuant"]
 n_bit_set = [2]
-full_precision_lengths = [128, 256]
+full_precision_lengths = [128]
 
 import sys
 sys.path.append('../../')
@@ -190,7 +190,8 @@ from tqdm import trange
 df = pd.DataFrame(columns=["question", "qid", "ground_truth", "ground_truth_answer", "model_output", "model_output_answer", "method", "accuracy", "bit_per_token", "total_length", "model_name"])
 #df = pd.read_csv(output_path)
 
-for i in trange(10):#len(ds['test'])):
+#for i in trange(10):#len(ds['test'])):
+for i in trange(len(ds['test'])):
     question = ds['test'][i]['question']
     ground_truth = ds['test'][i]['answer']
     ground_truth_answer = ds['test'][i]['answer'].split("####")[-1].strip()
