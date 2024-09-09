@@ -1,0 +1,25 @@
+task_group,model,method,bits,residual length,score
+Code Completion,Qwen2-7B-Instruct,KiVi,2,128,35.905
+Code Completion,Qwen2-7B-Instruct,LogQuant,2,128,48.705
+Code Completion,Qwen2-7B-Instruct,PartialLogQuant,2,128,49.555
+Code Completion,Qwen2-7B-Instruct,baseline,16,0,58.230000000000004
+Few-shot Learning,Qwen2-7B-Instruct,KiVi,2,128,35.260000000000005
+Few-shot Learning,Qwen2-7B-Instruct,LogQuant,2,128,51.2275
+Few-shot Learning,Qwen2-7B-Instruct,PartialLogQuant,2,128,51.042500000000004
+Few-shot Learning,Qwen2-7B-Instruct,baseline,16,0,61.9
+Multi-Document QA,Qwen2-7B-Instruct,KiVi,2,128,12.345
+Multi-Document QA,Qwen2-7B-Instruct,LogQuant,2,128,28.28
+Multi-Document QA,Qwen2-7B-Instruct,PartialLogQuant,2,128,28.1875
+Multi-Document QA,Qwen2-7B-Instruct,baseline,16,0,33.345
+Single-Document QA,Qwen2-7B-Instruct,KiVi,2,128,20.5225
+Single-Document QA,Qwen2-7B-Instruct,LogQuant,2,128,34.84
+Single-Document QA,Qwen2-7B-Instruct,PartialLogQuant,2,128,35.459999999999994
+Single-Document QA,Qwen2-7B-Instruct,baseline,16,0,44.655
+Summarization,Qwen2-7B-Instruct,KiVi,2,128,9.3125
+Summarization,Qwen2-7B-Instruct,LogQuant,2,128,13.125
+Summarization,Qwen2-7B-Instruct,PartialLogQuant,2,128,13.34
+Summarization,Qwen2-7B-Instruct,baseline,16,0,16.3325
+Synthetic Tasks,Qwen2-7B-Instruct,KiVi,2,128,11.416666666666666
+Synthetic Tasks,Qwen2-7B-Instruct,LogQuant,2,128,22.833333333333332
+Synthetic Tasks,Qwen2-7B-Instruct,PartialLogQuant,2,128,24.166666666666668
+Synthetic Tasks,Qwen2-7B-Instruct,baseline,16,0,43.0
