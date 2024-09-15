@@ -11,6 +11,10 @@ Code Completion,Qwen2-7B-Instruct,KiVi,2,128,35.905
 Code Completion,Qwen2-7B-Instruct,LogQuant,2,128,48.705
 Code Completion,Qwen2-7B-Instruct,PartialLogQuant,2,128,49.555
 Code Completion,Qwen2-7B-Instruct,baseline,16,0,58.230000000000004
+Code Completion,llama-3-8B-Instruct,KiVi,2,128,31.86
+Code Completion,llama-3-8B-Instruct,LogQuant,2,128,40.925
+Code Completion,llama-3-8B-Instruct,PartialLogQuant,2,128,43.1
+Code Completion,llama-3-8B-Instruct,baseline,16,0,54.085
 Code Completion,llama-3.1-8B-Instruct,KiVi,2,128,43.06
 Code Completion,llama-3.1-8B-Instruct,LogQuant,2,128,52.095
 Code Completion,llama-3.1-8B-Instruct,PartialLogQuant,2,128,52.364999999999995
@@ -27,6 +31,10 @@ Few-shot Learning,Qwen2-7B-Instruct,KiVi,2,128,35.260000000000005
 Few-shot Learning,Qwen2-7B-Instruct,LogQuant,2,128,51.2275
 Few-shot Learning,Qwen2-7B-Instruct,PartialLogQuant,2,128,51.042500000000004
 Few-shot Learning,Qwen2-7B-Instruct,baseline,16,0,61.9
+Few-shot Learning,llama-3-8B-Instruct,KiVi,2,128,51.0225
+Few-shot Learning,llama-3-8B-Instruct,LogQuant,2,128,54.192499999999995
+Few-shot Learning,llama-3-8B-Instruct,PartialLogQuant,2,128,54.1225
+Few-shot Learning,llama-3-8B-Instruct,baseline,16,0,55.7375
 Few-shot Learning,llama-3.1-8B-Instruct,KiVi,2,128,52.504999999999995
 Few-shot Learning,llama-3.1-8B-Instruct,LogQuant,2,128,56.427499999999995
 Few-shot Learning,llama-3.1-8B-Instruct,PartialLogQuant,2,128,56.9175
@@ -43,6 +51,10 @@ Multi-Document QA,Qwen2-7B-Instruct,KiVi,2,128,12.345
 Multi-Document QA,Qwen2-7B-Instruct,LogQuant,2,128,28.28
 Multi-Document QA,Qwen2-7B-Instruct,PartialLogQuant,2,128,28.1875
 Multi-Document QA,Qwen2-7B-Instruct,baseline,16,0,33.345
+Multi-Document QA,llama-3-8B-Instruct,KiVi,2,128,26.9
+Multi-Document QA,llama-3-8B-Instruct,LogQuant,2,128,29.0325
+Multi-Document QA,llama-3-8B-Instruct,PartialLogQuant,2,128,29.1925
+Multi-Document QA,llama-3-8B-Instruct,baseline,16,0,30.3775
 Multi-Document QA,llama-3.1-8B-Instruct,KiVi,2,128,34.0175
 Multi-Document QA,llama-3.1-8B-Instruct,LogQuant,2,128,36.082499999999996
 Multi-Document QA,llama-3.1-8B-Instruct,PartialLogQuant,2,128,35.8075
@@ -59,6 +71,10 @@ Single-Document QA,Qwen2-7B-Instruct,KiVi,2,128,20.5225
 Single-Document QA,Qwen2-7B-Instruct,LogQuant,2,128,34.84
 Single-Document QA,Qwen2-7B-Instruct,PartialLogQuant,2,128,35.459999999999994
 Single-Document QA,Qwen2-7B-Instruct,baseline,16,0,44.655
+Single-Document QA,llama-3-8B-Instruct,KiVi,2,128,34.09
+Single-Document QA,llama-3-8B-Instruct,LogQuant,2,128,37.625
+Single-Document QA,llama-3-8B-Instruct,PartialLogQuant,2,128,37.8775
+Single-Document QA,llama-3-8B-Instruct,baseline,16,0,41.625
 Single-Document QA,llama-3.1-8B-Instruct,KiVi,2,128,38.8925
 Single-Document QA,llama-3.1-8B-Instruct,LogQuant,2,128,41.9075
 Single-Document QA,llama-3.1-8B-Instruct,PartialLogQuant,2,128,42.480000000000004
@@ -75,6 +91,10 @@ Summarization,Qwen2-7B-Instruct,KiVi,2,128,9.3125
 Summarization,Qwen2-7B-Instruct,LogQuant,2,128,13.125
 Summarization,Qwen2-7B-Instruct,PartialLogQuant,2,128,13.34
 Summarization,Qwen2-7B-Instruct,baseline,16,0,16.3325
+Summarization,llama-3-8B-Instruct,KiVi,2,128,11.435
+Summarization,llama-3-8B-Instruct,LogQuant,2,128,12.3275
+Summarization,llama-3-8B-Instruct,PartialLogQuant,2,128,12.46
+Summarization,llama-3-8B-Instruct,baseline,16,0,13.01
 Summarization,llama-3.1-8B-Instruct,KiVi,2,128,16.1025
 Summarization,llama-3.1-8B-Instruct,LogQuant,2,128,16.622500000000002
 Summarization,llama-3.1-8B-Instruct,PartialLogQuant,2,128,16.74
@@ -91,6 +111,10 @@ Synthetic Tasks,Qwen2-7B-Instruct,KiVi,2,128,11.416666666666666
 Synthetic Tasks,Qwen2-7B-Instruct,LogQuant,2,128,22.833333333333332
 Synthetic Tasks,Qwen2-7B-Instruct,PartialLogQuant,2,128,24.166666666666668
 Synthetic Tasks,Qwen2-7B-Instruct,baseline,16,0,43.0
+Synthetic Tasks,llama-3-8B-Instruct,KiVi,2,128,30.650000000000002
+Synthetic Tasks,llama-3-8B-Instruct,LogQuant,2,128,44.833333333333336
+Synthetic Tasks,llama-3-8B-Instruct,PartialLogQuant,2,128,45.5
+Synthetic Tasks,llama-3-8B-Instruct,baseline,16,0,54.5
 Synthetic Tasks,llama-3.1-8B-Instruct,KiVi,2,128,45.02333333333333
 Synthetic Tasks,llama-3.1-8B-Instruct,LogQuant,2,128,52.51
 Synthetic Tasks,llama-3.1-8B-Instruct,PartialLogQuant,2,128,52.10999999999999

@@ -1,13 +1,13 @@
 # %%
 #-----------------------------------------------------------------------------
-model_name = "Qwen/Qwen1.5-1.8B-Chat"
+model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 device = "cuda:0"
-output_path = "functional_test.csv"
+output_path = "KiVi-4-bit-llama31.csv"
 #methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant"]
 #methods = ["baseline", "KiVi", "StreamingQuant", "LogQuant", "PartialStreamingQuant", "PartialLogQuant", "KiViSink"]
-methods = ["KiViSink"]
+methods = ["KiVi"]
 #methods = ["PartialLogQuant"]
-n_bit_set = [2]
+n_bit_set = [4]
 full_precision_lengths = [128]
 
 import sys
