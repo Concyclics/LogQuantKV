@@ -1,11 +1,12 @@
 # %%
 # %%
 #-----------------------------------------------------------------------------
-model_name = "Qwen/Qwen1.5-0.5B-Chat-AWQ"
+model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 device = "cuda:0"
 output_path = "speed.csv"
-methods = ["baseline", "KiVi", "LogQuant", "PartialLogQuant"]
-methods = ["KiVi"]
+methods = ["LogQuant"]
+#methods = ["LogQuant"]
+#methods = ["KiVi"]
 n_bit_set = [2]
 full_precision_lengths = [128]
 
@@ -21,10 +22,8 @@ from src.LogQuant import (QuantoLogQuantizedCache, LogQuantizedCacheConfig,
 import torch
 from torch import nn
 data_type = 'auto'
-new_token_length = 4096
-
-from datasets import load_dataset
-ds = load_dataset("THUDM/LongBench", "2wikimqa_e", split="test")
+input_length = 512
+new_token_length = 1000
 
 # %%
 from transformers import Cache, CacheConfig, QuantizedCacheConfig, DynamicCache, QuantizedCache, QuantoQuantizedCache
@@ -40,7 +39,8 @@ model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype=data_type,
     device_map=device,
-    trust_remote_code=True
+    trust_remote_code=True,
+    attn_implementation="flash_attention_2",
 )
 tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
@@ -124,42 +124,52 @@ def get_cache(method, n_bits, dense):
     return cache
 
 # %%
-def run_with_cache(model, qid, cache, batch_size):
-    chat_template = to_chat_template(ds[qid]["input"], ds[qid]["context"])
-    input_ids = tokenizer([chat_template for _ in range(batch_size)], return_tensors="pt", padding=True, truncation=True).input_ids.to(device)
+def run_with_cache(model, cache, batch_size):
+    text = "t" * input_length
+    input_ids = tokenizer([text for _ in range(batch_size)], return_tensors="pt").input_ids.to(device)
     length = input_ids.shape[1]
     output_lens = 0
     import time
-    start = time.time()
-    model.generation_config.temperature=None
-    model.generation_config.top_p=None
-    output = model.generate(input_ids, past_key_values=cache, pad_token_id=tokenizer.eos_token_id, max_new_tokens=new_token_length, do_sample=False)
-    end = time.time()
+    torch.cuda.reset_peak_memory_stats()
+    with torch.no_grad():
+        torch.cuda.synchronize()
+        model.generation_config.temperature=None
+        model.generation_config.top_p=None
+        start = time.time()
+        if cache is None:
+            output = model.generate(input_ids, max_new_tokens=new_token_length, do_sample=False, pad_token_id=tokenizer.eos_token_id, cache_implementation="quantized", cache_config={"backend": "quanto", "nbits": 2})
+        else:
+            output = model.generate(input_ids, past_key_values=cache, max_new_tokens=new_token_length, do_sample=False, pad_token_id=tokenizer.eos_token_id)
+        torch.cuda.synchronize()
+        end = time.time()
+
     for out in output:
-        output_lens += len(out)
+        output_lens += len(out) - length
+    used_mem = torch.cuda.max_memory_allocated() / 1024 / 1024 / 1024
 
     del input_ids
     del output
+    torch.cuda.empty_cache()
     
-    return length, output_lens, end - start
+    return length, output_lens, end - start, used_mem
 
 
 # %%
 import pandas as pd
 import tqdm
-df = pd.DataFrame(columns=["method", "n_bit", "dense", "batch_size", "qid", "input_len", "output_len", "time", "speed"])
-for qid in tqdm.tqdm(range(10)):
-    for method in methods:
-        if method == "baseline":
-            batch_sizes = [1, 2, 4, 8, 12, 16]
-        else:
-            batch_sizes = [1, 2, 4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 112, 128]
-        for n_bit in n_bit_set:
-            for dense in full_precision_lengths:
-                for batch_size in batch_sizes:
-                    cache = get_cache(method, n_bit, dense)
-                    length, output_lens, time = run_with_cache(model, qid, cache, batch_size)
-                    df = pd.concat([df, pd.DataFrame([[method, n_bit, dense, batch_size, qid, length, output_lens, time, output_lens/time]], columns=df.columns)], ignore_index=True)
-                    df.to_csv(output_path, index=False)
+df = pd.DataFrame(columns=["method", "n_bit", "dense", "batch_size", "input_len", "output_len", "time", "speed", "memory"])
+for method in methods:
+    if method == "baseline":
+        batch_sizes = list(range(1, 4))+list(range(4, 32, 4))+list(range(32, 128, 16))
+    else:
+        batch_sizes = [8,]#list(range(1, 4))+list(range(4, 32, 4))+list(range(32, 128, 16))+list(range(128, 385, 32))
+    for n_bit in n_bit_set:
+        for dense in full_precision_lengths:
+            for batch_size in tqdm.tqdm(batch_sizes):
+                cache = get_cache(method, n_bit, dense)
+                length, output_lens, time, mem = run_with_cache(model, cache, batch_size)
+                df = pd.concat([df, pd.DataFrame([[method, n_bit, dense, batch_size, length, output_lens, time, output_lens/time, mem]], columns=df.columns)], ignore_index=True)
+                df.to_csv(output_path, index=False)
+                torch.cuda.empty_cache()
 
 
