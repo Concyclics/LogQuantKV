@@ -3,7 +3,7 @@
 #-----------------------------------------------------------------------------
 model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 device = "cuda:0"
-output_path = "speed.csv"
+output_path = "speed2.csv"
 methods = ["LogQuant"]
 #methods = ["LogQuant"]
 #methods = ["KiVi"]
@@ -22,8 +22,8 @@ from src.LogQuant import (QuantoLogQuantizedCache, LogQuantizedCacheConfig,
 import torch
 from torch import nn
 data_type = 'auto'
-input_length = 512
-new_token_length = 1000
+input_length = 161
+new_token_length = 338
 
 # %%
 from transformers import Cache, CacheConfig, QuantizedCacheConfig, DynamicCache, QuantizedCache, QuantoQuantizedCache
@@ -160,9 +160,9 @@ import tqdm
 df = pd.DataFrame(columns=["method", "n_bit", "dense", "batch_size", "input_len", "output_len", "time", "speed", "memory"])
 for method in methods:
     if method == "baseline":
-        batch_sizes = list(range(1, 4))+list(range(4, 32, 4))+list(range(32, 128, 16))
+        batch_sizes = [8,] #list(range(1, 4))+list(range(4, 32, 4))+list(range(32, 128, 16))
     else:
-        batch_sizes = [8,]#list(range(1, 4))+list(range(4, 32, 4))+list(range(32, 128, 16))+list(range(128, 385, 32))
+        batch_sizes = [8,] #list(range(1, 4))+list(range(4, 32, 4))+list(range(32, 128, 16))+list(range(128, 385, 32))
     for n_bit in n_bit_set:
         for dense in full_precision_lengths:
             for batch_size in tqdm.tqdm(batch_sizes):
