@@ -3,7 +3,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.LogQuant import QuantoPartialLogQuantizedCache, PartialLogQuantizedCacheConfig
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
-model_name = "Qwen/Qwen1.5-1.8B-Chat"
+model_name = "Qwen/Qwen2.5-7B-Instruct-1M"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
