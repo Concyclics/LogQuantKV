@@ -1,5 +1,5 @@
 # LogQuantKV
-LogQuantKV, a high precision 2-bit Quantization method.
+Official Implementation of [LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation](https://www.researchgate.net/publication/388733634_LogQuant_Log-Distributed_2-Bit_Quantization_of_KV_Cache_with_Superior_Accuracy_Preservation).
 
 ## how to use
 
@@ -71,5 +71,18 @@ user
 assistant
 不，把脏话或不尊重的语言说出口并不会让嘴巴变得干净。恰恰相反，这通常会显示出粗俗、不礼貌或者情绪失控。真正的“干净”是通过言语和行为展现出尊重、理解、宽容和礼貌。即使在压力或冲突的情况下，我们也应该努力控制自己的言辞，用更建设性的方式表达我们的想法。
 '''
+```
+
+## Citation
+If you find LogQuant useful or relevant to your project and research, please kindly cite our paper:
+```
+@inproceedings{
+han2025logquant,
+title={LogQuant: Log-Distributed 2-Bit Quantization of {KV} Cache with Superior Accuracy Preservation},
+author={CHEN Han and Zicong Jiang and Zining Zhang and Bingsheng He and Luo Pingyi and Mian Lu and Yuqiang Chen},
+booktitle={Sparsity in LLMs (SLLM): Deep Dive into Mixture of Experts, Quantization, Hardware, and Inference},
+year={2025},
+url={https://openreview.net/forum?id=E26zsSXT3J}
+}
 ```
 
