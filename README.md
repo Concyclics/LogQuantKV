@@ -1,5 +1,5 @@
 # LogQuantKV
-Official Implementation of [LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation](https://www.researchgate.net/publication/388733634_LogQuant_Log-Distributed_2-Bit_Quantization_of_KV_Cache_with_Superior_Accuracy_Preservation).
+Official Implementation of [LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation](https://arxiv.org/pdf/2503.19950?).
 
 ## how to use
 
