@@ -1,6 +1,9 @@
 # LogQuantKV
 Official Implementation of [LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation](https://arxiv.org/pdf/2503.19950?).
 
+## News
+* LogQuant has been accepted by ICLR2025 Sparsity in LLMs (SLLM) workshop.
+
 ## how to use
 
 ### requirements
